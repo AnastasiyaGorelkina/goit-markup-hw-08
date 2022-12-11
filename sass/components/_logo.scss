@@ -1,0 +1,17 @@
+.logo{
+    color: $accsent-color;
+    
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: $letter-spacing;
+    text-decoration: none;
+
+    &__text--head-сolor {
+        color: $logo-accsent;
+    }
+    &__text--foot-сolor {
+        color: $secondary-ac-color;
+    }
+}

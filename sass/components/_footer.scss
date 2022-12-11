@@ -1,0 +1,99 @@
+.footer {
+    padding: 60px 0;
+    background-color:$secondary-background-color;
+
+    
+}
+.footerbox {
+     @media screen and ( min-width: 480px) {
+        text-align: center;
+    }
+}
+.networks {
+    display: flex;
+
+    @media screen and (min-width:480px) {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address-link {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+@media screen and (min-width: 480px) {
+    &__item + &__item {
+        margin-top: 8px;
+    }
+}
+    
+}
+
+.address-link__link {
+    color: $secondary-ac-color;
+
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.7;
+
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover, &:focus {
+        color: $accsent-color; 
+    }
+
+    &--mail, &--tel {
+        @extend .address-link__link;
+        color: $text-link-footer;
+    }
+
+}
+
+.footer__title {
+    color: $secondary-ac-color;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    
+    margin: 0;
+
+     @media screen and ( min-width: 480px) {
+        text-align: center;
+    }
+}
+.footer__social-net {
+    width: 206px;
+    padding-top: 12px;
+
+    @media screen and (min-width: 480px) {
+        margin-top: 60px;
+    }
+}
+
+.social-networks--foot {
+    @extend .social-networks;
+    margin-top: 20px;
+
+    &__icon {
+    @extend .social-networks__icon;
+    color: $secondary-ac-color;
+    background-color: #ffffff1A;
+    border-radius: 50%;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__icon:hover, &__icon:focus {
+        color: $secondary-ac-color;
+        background-color: $accsent-color;
+    }
+}
