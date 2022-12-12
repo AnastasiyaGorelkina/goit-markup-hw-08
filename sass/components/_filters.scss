@@ -1,0 +1,55 @@
+.portfolio__titel {
+    margin-bottom: 4px;
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+&--visually-hidden {
+    @extend %visually-hidden;
+}
+}
+
+.filters {
+    @extend %list;
+    display: flex;
+    margin-bottom: 50px;
+
+@media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+@media screen and (min-width: 768px) {
+    justify-content:center;
+
+    &__item + &__item {
+    margin-left: 8px;
+}
+}
+}
+
+.button {
+    border: $button-color;
+    padding: 6px 22px;
+    border-radius: 4px;
+
+    background-color: $button-color;
+    color: $titel-text-color;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover, &:focus {
+  background-color: $accsent-color;
+    color: $secondary-ac-color;
+    cursor:pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+}

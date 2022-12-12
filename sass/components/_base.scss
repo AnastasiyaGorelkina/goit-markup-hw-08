@@ -9,10 +9,14 @@ body {
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 
     @media screen and (min-width: 480px) {
     width: 480px;
 }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
 }
 
 h1, h2, h3, p {
@@ -35,7 +39,7 @@ img {
         background-color: $background-basis;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 0px), (min-width: 480px) {
     padding: 60px 0px;
 }
 }
@@ -51,7 +55,7 @@ img {
         @extend %visually-hidden;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 0px), (min-width: 480px) {
         font-size: 28px;
         margin-bottom: $margin-gap-set;
 }
@@ -64,10 +68,35 @@ img {
     cursor:pointer;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 0px), (min-width: 480px) {
         &__item {
             margin-bottom: $margin-gap-set;
         }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__item {
+        flex-basis: calc((100% - $margin-gap-set * 1) / 2);
+    }
+    }
+}
+    .card-set--secondary {
+    @extend %card-set;
+
+    &__item {
+    cursor:pointer;
+    }
+
+    @media screen and (min-width: 0px), (min-width: 480px) {
+        &__item {
+            margin-bottom: $margin-gap-set;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__item {
+        flex-basis: calc((100% - $margin-gap-set * 1) / 2);
+    }
     }
 }
 
@@ -85,7 +114,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--icon-color-primary);
+    color: $icon-color-primary;
     border-radius: 50%;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,7 +125,7 @@ img {
         background-color: $accsent-color;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 0px), (min-width: 480px) {
         justify-content: center;
 
         &__item + &__item {

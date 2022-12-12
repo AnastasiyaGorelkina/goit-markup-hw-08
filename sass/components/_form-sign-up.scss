@@ -1,6 +1,6 @@
 .form__sign-up{
 
-    @media screen and ( min-width: 480px) {
+    @media screen and (min-width: 0px), ( min-width: 480px) {
         width: 480px;
         margin-top: 60px;
         text-align: center;
@@ -9,7 +9,7 @@
 .sign-up {
     display: flex;
     
-    @media screen and ( min-width: 480px) {
+    @media screen and (min-width: 0px), ( min-width: 480px) {
         flex-direction: column;
         align-items: center;
     }
