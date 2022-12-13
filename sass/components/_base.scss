@@ -13,9 +13,14 @@ body {
 
     @media screen and (min-width: 480px) {
     width: 480px;
-}
+    }
+
     @media screen and (min-width: 768px) {
         width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
     }
 }
 
@@ -29,19 +34,27 @@ img {
 }
 
 .section {
-
     &--padding-off {
         @extend .section;
         padding-bottom: 0px;
     }
+
     &--background {
         @extend .section;
         background-color: $background-basis;
     }
 
     @media screen and (min-width: 0px), (min-width: 480px) {
-    padding: 60px 0px;
-}
+        padding: 60px 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+         padding: 94px 0px; 
+         
+         &--padding-off {
+            padding-bottom: 0px;
+         }
+    }
 }
 
 .title-primary {
@@ -58,7 +71,12 @@ img {
     @media screen and (min-width: 0px), (min-width: 480px) {
         font-size: 28px;
         margin-bottom: $margin-gap-set;
-}
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 .card-set--primary {
@@ -79,6 +97,13 @@ img {
         flex-basis: calc((100% - $margin-gap-set * 1) / 2);
     }
     }
+
+    @media screen and (min-width: 1200px) {
+        &__item {
+        flex-basis: calc((100% - $margin-gap-set * 3) / 4);
+    }
+    }
+    
 }
     .card-set--secondary {
     @extend %card-set;
@@ -96,6 +121,12 @@ img {
     @media screen and (min-width: 768px) {
         &__item {
         flex-basis: calc((100% - $margin-gap-set * 1) / 2);
+    }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__item {
+        flex-basis: calc((100% - $margin-gap-set * 2) / 3);
     }
     }
 }
@@ -125,11 +156,15 @@ img {
         background-color: $accsent-color;
     }
 
-    @media screen and (min-width: 0px), (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
         justify-content: center;
 
         &__item + &__item {
             margin-left: 10px;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
     }
 }

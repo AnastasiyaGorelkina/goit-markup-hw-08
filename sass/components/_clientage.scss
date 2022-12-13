@@ -21,7 +21,7 @@
                 border: 1px solid $accsent-color;
             }
 
-    @media screen and (min-width: 0px), (min-width: 480px) {
+    @media screen and (max-width: 767px) {
         flex-wrap: wrap;
         gap: $margin-gap-set;
 
@@ -30,9 +30,20 @@
     }
     }
 
-    @media screen and (min-width: 768px) { 
+    @media screen and (max-width: 1199px) { 
+        flex-wrap: wrap;
+        gap: $margin-gap-set;
+
         &__item {
         flex-basis: calc((100% - $margin-gap-set * 2) / 3);
     }
-}
+    }
+
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+
+         &__icon {
+            width: 170px;
+         }
+    }
 }
