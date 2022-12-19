@@ -1,4 +1,6 @@
 .menu-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +65,7 @@
 }
 .mob-auth {
     @extend %list;
-    margin-top: 302px;
+    margin-top: auto;
     
     &__link-tel {
         font-weight: 500;
@@ -72,6 +74,10 @@
         letter-spacing: 0.02em;
         text-decoration: none;
         color: $accsent-color;
+
+        @media screen and (max-width: 479px) {
+            font-size: 24px;
+        }
     }
     &__item + &__item {
         margin-top: 32px;
@@ -105,4 +111,8 @@
         
     }
 
+    @media screen and (max-width: 479px) {
+        flex-wrap: wrap;
+        gap: 10px 5px;
+    }
 }

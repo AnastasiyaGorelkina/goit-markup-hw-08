@@ -52,10 +52,17 @@
 .projects__title {
     margin-bottom: 4px;
 
-    font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: $titel-text-color;
+
+    @media screen and (max-width: 1199px)  {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 1200px) {
+       font-size: 18px; 
+    }
 }
 
 .projects__format {

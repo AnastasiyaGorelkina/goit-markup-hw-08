@@ -3,6 +3,10 @@ body {
     color: $primary-text-color;
     font-family: $ont-family-primary;
     letter-spacing: $letter-spacing;
+
+    & .modal.is-open {
+        overflow: hidden;
+    }
 }
 
 .container {
